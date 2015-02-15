@@ -1,0 +1,33 @@
+body{
+  background-color:#e4eaf2;
+}
+div#header{
+  text-align:center;
+  margin:20px;
+  border-bottom:1px solid #D95555;
+  font-family:'BebasNeueRegular', 'Helvetica Neue', arial, sans-serif;
+}
+h1{
+  color:#565659;
+}
+table{
+  margin:0px auto;/override the previous sets./
+  font-family:serif;
+  color:#565659;
+}
+th{
+  font-size:20px;
+  padding:10px;
+  background-color:#bac8d9;
+}
+td{
+  background-color:#f2f0c9;
+  font-size:18px;
+  padding:10px;
+}
+div#footer{
+  text-align:center;
+}
+p#me{
+  font-style: italic;
+}
