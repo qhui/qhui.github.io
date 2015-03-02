@@ -1,0 +1,97 @@
+<!DOCYTYPE html>
+<meta charset="utf-8">
+<style>
+	.country{
+		fill: none;
+		stroke: #a9a9a9;
+		stroke-width: 1;
+	}
+	.country:hover{
+		fill-opacity:0.5;
+	}
+	#tooltip {
+		position: absolute;
+		text-align: center;
+		padding: 20px;
+		margin: 10px;
+		font: 12px sans-serif;
+		background: lightsteelblue;
+		border: 1px;
+		border-radius: 2px;
+		pointer-events: none;
+	}
+	#tooltip h4{
+		margin:0;
+		font-size:14px;
+	}
+	#tooltip{
+		background:rgba(0,0,0,0.9);
+		border:1px solid grey;
+		border-radius:5px;
+		font-size:12px;
+		width:auto;
+		padding:4px;
+		color:white;
+		opacity:0;
+	}
+	#tooltip table{
+		table-layout:fixed;
+	}
+	#tooltip tr td{
+		padding:0;
+		margin:0;
+	}
+	#tooltip tr td:nth-child(1){
+		width:50px;
+	}
+	#tooltip tr td:nth-child(2){
+		text-align:center;
+	}
+
+</style>
+<body>
+<div id="tooltip"></div><!-- div to hold tooltip. -->
+<h1 align="center">Homework 3</h1>
+<h2 align="center">Qun Hui</h2>
+<svg width="960" height="600" id="countrysvg"></svg> <!-- svg to hold the map. -->
+<p align="center">
+  Data source: http://nces.ed.gov/programs/digest/d12/tables/dt12_460.asp
+</p>
+<p style="font-style: italic">
+  The visualization shows the "Mathematics and Science" instructional hours distribution of selected conuntries. The deeper the blue is, the more the instruction time is. As you can see from this visualizatin, Western countries tend to spend more time on Mathematics and Science intstruction than other countries.
+</p>
+<script src="../ammap/maps/js/worldLow.js"></script> <!-- creates uStates. -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+	function tooltipHtml(title, d){	/* function to create html content string in tooltip div. */
+		/*return "<h4>"+title+"</h4><table>"+
+			"<tr><td>Low</td><td>"+(d.low)+"</td></tr>"+
+			"<tr><td>Average</td><td>"+(d.avg)+"</td></tr>"+
+			"<tr><td>High</td><td>"+(d.high)+"</td></tr>"+
+			"</table>";*/
+	}
+
+	var sampleData ={};	/* Sample random data. */
+/*	["AE","AF","AL"]
+		.forEach(function(d){
+			var low=Math.round(100*Math.random()),
+				mid=Math.round(100*Math.random()),
+				high=Math.round(100*Math.random());
+			sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]),
+					avg:Math.round((low+mid+high)/3), color:"#368279"};
+		});*/
+
+	/* draw states on id #statesvg */
+  Country.draw("#countrysvg", sampleData, tooltipHtml);
+  var countries = "#AM, #AU, #AT, #AZ, #BE, #CL, #CN, #CZ, #DK, #GB, #FI, #GE, #DE, #HU, #IR, #IE, #IT, #JP, #KZ, #KP, #KW, #LT, #MA, #NL, #NZ, #NO, #OM, #PL, #PT, #QA, #RO, #RU, #SA, #RS, #SK, #SI, #ES, #SE, #TH, #TN, #TR, #AE, #US, #YE";
+  d3.selectAll(countries)
+  .data([0.35, 0.62, 0.27, 0.27, 0.62, 1, 0.59, 0.23, 0.37, 0.55, 0.22, 0.17, 0.37, 0.19, 0.13, 0.35, 0.75, 0.42, 0.22, 0.24, 0.48, 0, 0.68, 0.73, 0.48, 0.29, 0.60, 0.20, 0.50, 0.72, 0.25, 0.02, 0.57, 0.22, 0.23, 0.06, 0.41, 0.35, 0.95, 0.54, 0.43, 0.65, 0.74, 0.31])
+  .style("fill", "blue")
+  .style("opacity", function(d){return d;});
+
+</script>
+
+</body>
+
+</body>
