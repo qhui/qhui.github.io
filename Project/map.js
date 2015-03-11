@@ -886,21 +886,9 @@
 
 			var Country={};
 
-			Country.draw = function(id, data, toolTip){
-					function mouseOver(d){
-						d3.select("#tooltip").transition().duration(200).style("opacity", .9);
-						d3.select("#tooltip").html(toolTip(d.title, data[d.id]))
-							.style("left", (d3.event.pageX) + "px")
-							.style("top", (d3.event.pageY - 28) + "px");
-					}
-
-					function mouseOut(){
-						d3.select("#tooltip").transition().duration(500).style("opacity", 0);
-					}
-
+			Country.draw = function(id){
 					d3.select(id).selectAll(".country")
-						.data(CounrtyPaths).enter().append("path").attr("class","country").attr("id",function(d){ return d.id;}).attr("d",function(d){ return d.d;})
-						.on("mouseover", mouseOver).on("mouseout", mouseOut);
+						.data(CounrtyPaths).enter().append("path").attr("class","country").attr("id",function(d){ return d.id;}).attr("d",function(d){ return d.d;});
 				}
 				this.Country=Country;
 			})();
