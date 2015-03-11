@@ -57,7 +57,7 @@ var svg = d3.select("body").append("svg")
 
 d3.tsv("data.tsv", type, function(error, data) {
   x.domain(data.map(function(d) { return d.uname; }));
-  y.domain([0, d3.max(data, function(d) { return d.score; })]);
+  y.domain([0, d3.max(data, function(d) { return d.snumber; })]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -80,13 +80,13 @@ d3.tsv("data.tsv", type, function(error, data) {
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.uname); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.score); })
-      .attr("height", function(d) { return height - y(d.score); });
+      .attr("y", function(d) { return y(d.snumber); })
+      .attr("height", function(d) { return height - y(d.snumber); });
 
 });
 
 function type(d) {
-  d.score = +d.score;
+  d.snumber = +d.snumber;
   return d;
 }
 
