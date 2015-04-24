@@ -32,7 +32,7 @@ d3.json("exam2.json", function(json) {
       .on("click", function(column){
         //console.log(column);
         d3.selectAll("th")
-          .style("background-color", "white");
+          .style("background-color", "#d3d3d3");
         d3.select(this)
           .style("background-color", "#CCCC00");
         data.sort(sort_by(column, true, parseInt));
