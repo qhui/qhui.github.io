@@ -14,28 +14,36 @@ d3.json("exam2.json", function(json) {
       .text(function(column){return column; });
 
   var i = -1;
+  //var yactive = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+  var gactive = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   var rows = tbody.selectAll("tr")
       .data(data)
       .enter()
       .append("tr")
       .attr("id", function(d){
         i = i + 1;
-        return "item"+i;
+        return i;
       })
       .on("mouseover", function(){
         d3.select(this)
           .style("background-color", "yellow");
       })
-      //.on("mouseout", function(){
-      //  d3.select(this)
-        //  .style("background-color", "white");
-      //})
+      .on("mouseout", function(){
+          d3.select(this)
+         .style("background-color", function(){
+           if(gactive[this.id] == 1){
+             return "green";
+           }
+           else{
+             return "white";
+           };
+         });
+      })
       .on("click", function(){
-        var id = this.id;
-        id = "#"+id;
-        d3.select(id)
+        d3.select(this)
           .style("background-color", "green");
-          //d3.event.stopPropagation();
+          gactive[this.id] = 1;
+          d3.event.stopPropagation();
       });
 
   var cells = rows.selectAll("td")
