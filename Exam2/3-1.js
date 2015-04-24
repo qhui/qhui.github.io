@@ -26,10 +26,10 @@ d3.json("exam2.json", function(json) {
         d3.select(this)
           .style("background-color", "yellow");
       })
-      .on("mouseout", function(){
-        d3.select(this)
-          .style("background-color", "white");
-      })
+      //.on("mouseout", function(){
+      //  d3.select(this)
+        //  .style("background-color", "white");
+      //})
       .on("click", function(){
         var id = this.id;
         id = "#"+id;
