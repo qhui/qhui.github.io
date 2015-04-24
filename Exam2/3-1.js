@@ -1,5 +1,5 @@
 var data;
-d3.json("rightdata.json", function(json) {
+d3.json("exam2.json", function(json) {
   data = json;
-  var hd = Object.keys(json);
+  console.log(data);
 });
