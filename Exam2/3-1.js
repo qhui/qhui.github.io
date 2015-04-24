@@ -16,7 +16,10 @@ d3.json("exam2.json", function(json) {
   var rows = tbody.selectAll("tr")
       .data(data)
       .enter()
-      .append("tr");
+      .append("tr")
+      .attr("id", function(d){
+        return d;
+      });
 
   var cells = rows.selectAll("td")
       .data(function(row) {
