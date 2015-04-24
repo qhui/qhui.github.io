@@ -30,7 +30,11 @@ d3.json("exam2.json", function(json) {
       .append("th")
       .text(function(column){return column; })
       .on("click", function(column){
-        console.log(column);
+        //console.log(column);
+        d3.selectAll("th")
+          .style("background-color", "white");
+        d3.select(this)
+          .style("background-color", "#CCCC00");
         data.sort(sort_by(column, true, parseInt));
         d3.selectAll(".tb")
         .remove();
