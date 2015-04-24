@@ -13,7 +13,7 @@ d3.json("exam2.json", function(json) {
       .append("th")
       .text(function(column){return column; });
 
-  var i = -1; 
+  var i = -1;
   var rows = tbody.selectAll("tr")
       .data(data)
       .enter()
@@ -21,6 +21,14 @@ d3.json("exam2.json", function(json) {
       .attr("id", function(d){
         i = i + 1;
         return i;
+      })
+      .on("mouseover", function(){
+        d3.select(this)
+          .style("background-color", "yellow");
+      })
+      .on("mouseout", function(){
+        d3.select(this)
+          .style("background-color", "white");
       });
 
   var cells = rows.selectAll("td")
