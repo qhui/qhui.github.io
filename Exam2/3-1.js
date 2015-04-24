@@ -20,7 +20,7 @@ d3.json("exam2.json", function(json) {
       .append("tr")
       .attr("id", function(d){
         i = i + 1;
-        return i;
+        return "item"+i;
       })
       .on("mouseover", function(){
         d3.select(this)
@@ -35,7 +35,7 @@ d3.json("exam2.json", function(json) {
         id = "#"+id;
         d3.select(id)
           .style("background-color", "green");
-          d3.event.stopPropagation();
+          //d3.event.stopPropagation();
       });
 
   var cells = rows.selectAll("td")
