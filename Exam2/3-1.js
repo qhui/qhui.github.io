@@ -33,6 +33,7 @@ d3.json("exam2.json", function(json) {
       .on("click", function(){
         d3.select(this)
           .style("background-color", "green");
+          d3.event.stopPropagation();
       });
 
   var cells = rows.selectAll("td")
