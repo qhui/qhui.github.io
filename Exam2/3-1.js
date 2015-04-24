@@ -29,6 +29,10 @@ d3.json("exam2.json", function(json) {
       .on("mouseout", function(){
         d3.select(this)
           .style("background-color", "white");
+      })
+      .on("click", function(){
+        d3.select(this)
+          .style("background-color", "green");
       });
 
   var cells = rows.selectAll("td")
