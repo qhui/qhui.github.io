@@ -122,6 +122,7 @@ function tabulate(data, columns) {
         .append("td")
         .attr("style", "font-family: Courier") // sets the font style
             .html(function(d) {
+              console.log("see");
               console.log(d.value);
               return d.value; });
 
