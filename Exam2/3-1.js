@@ -16,8 +16,8 @@ d3.json("exam2.json", function(json) {
       .text(function(column){return column; })
       .on("click", function(column){
         console.log(column);
-        data = data.sort(function(a,b){
-          return d3.descending(a.column, b.column);
+        data.sort(function(a,b){
+          return d3.descending(a.A, b.A);
         });
       });
 
