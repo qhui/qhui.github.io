@@ -454,7 +454,7 @@
 				},
 				{
 					"id":"LA",
-					"title":"Lao People's Democratic Republic",
+					"title":"Laos",
 					"d":"M770.27,423.21L771.18,421.91L771.31,419.47L769.04,416.94L768.86,414.07L766.73,411.69L764.61,411.49L764.05,412.51L762.4,412.59L761.56,412.08L758.61,413.82L758.54,411.2L759.23,408.09L757.34,407.96L757.18,406.18L755.96,405.26L756.56,404.16L758.95,402.22L759.2,402.92L760.69,403L760.27,399.57L761.72,399.13L763.36,401.5L764.62,404.22L768.07,404.25L769.16,406.84L767.37,407.61L766.56,408.68L769.92,410.44L772.25,413.9L774.02,416.47L776.14,418.49L776.85,420.53L776.34,423.41L773.85,422.35L772.58,424.34z"
 				},
 				{
@@ -888,7 +888,7 @@
 
 			Country.draw = function(id){
 					d3.select(id).selectAll(".country")
-						.data(CounrtyPaths).enter().append("path").attr("class","country").attr("id",function(d){ return d.id;}).attr("d",function(d){ return d.d;});
+						.data(CounrtyPaths).enter().append("path").attr("class","country").attr("id",function(d){ return d.title;}).attr("d",function(d){ return d.d;});
 				}
 				this.Country=Country;
 			})();
