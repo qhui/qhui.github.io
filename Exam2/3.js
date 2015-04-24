@@ -95,3 +95,10 @@ d3.json("exam2.json", function(json) {
         };
     updateData();
     });
+
+/*------------Reference------------
+
+I referred to http://bl.ocks.org/d3noob/473f0cf66196a008cf99 to create the table using D3.js.
+I referred to http://stackoverflow.com/questions/979256/sorting-an-array-of-javascript-objects to sort the data by key.
+
+*/
