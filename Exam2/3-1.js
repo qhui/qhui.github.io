@@ -88,5 +88,5 @@ d3.json("exam2.json", function(json) {
 
           return table;
         };
-
+    updateData();
     });
