@@ -33,7 +33,7 @@ d3.json("exam2.json", function(json) {
         console.log(column);
         data.sort(sort_by(column, true, parseInt));
         d3.select("td")
-          remove();
+        .remove();
         updateData();
       });
 
