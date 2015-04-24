@@ -1,4 +1,6 @@
 var data;
+var gactive = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
 d3.json("exam2.json", function(json) {
   data = json;
   var columns = Object.keys(data[0]);
@@ -14,7 +16,6 @@ d3.json("exam2.json", function(json) {
       .text(function(column){return column; });
 
   var i = -1;
-  var gactive = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   var rows = tbody.selectAll("tr")
       .data(data)
       .enter()
@@ -41,6 +42,7 @@ d3.json("exam2.json", function(json) {
       .on("click", function(){
         d3.selectAll("tr")
           .style("background-color","white");
+        gactive = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         d3.select(this)
           .style("background-color", "green");
           gactive[this.id] = 1;
