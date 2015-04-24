@@ -36,8 +36,9 @@ d3.json("exam2.json", function(json) {
           .remove();
         updateData();
       });
+      
   updateData();
-  
+
   updateData = function(){
     /*------------------Create the table rows------------------------*/
       var i = -1;
