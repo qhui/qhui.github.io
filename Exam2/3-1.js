@@ -21,7 +21,7 @@ d3.json("exam2.json", function(json) {
   var data1 = [];
   for(var i = 0; i < data.length; i++){
     var d = data[i];
-    data1.push(d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.G);
+    data1.push([d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.G]);
   }
 
   var cells = rows.selectAll("td")
