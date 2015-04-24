@@ -31,7 +31,9 @@ d3.json("exam2.json", function(json) {
           .style("background-color", "white");
       })
       .on("click", function(){
-        d3.select(this)
+        var id = this.id;
+        id = "#"+id;
+        d3.select(id)
           .style("background-color", "green");
           d3.event.stopPropagation();
       });
