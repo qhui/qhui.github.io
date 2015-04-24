@@ -1,7 +1,7 @@
 var data;
 d3.json("exam2.json", function(json) {
   data = json;
-  var columns = Object.key(data[0]);
+  var columns = Object.keys(data[0]);
   var table = d3.select("body").append("table");
   var thead = table.append("thead");
   var tbody = table.append("tbody");
