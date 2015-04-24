@@ -13,12 +13,14 @@ d3.json("exam2.json", function(json) {
       .append("th")
       .text(function(column){return column; });
 
+  var i = -1; 
   var rows = tbody.selectAll("tr")
       .data(data)
       .enter()
       .append("tr")
       .attr("id", function(d){
-        return d;
+        i = i + 1;
+        return i;
       });
 
   var cells = rows.selectAll("td")
