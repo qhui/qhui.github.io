@@ -18,16 +18,22 @@ d3.json("exam2.json", function(json) {
       .enter()
       .append("tr");
 
+  var data1 = [];
+  for(var i = 0; i < data.length; i++){
+    var d = data[i];
+    data1.push(d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.G);
+  }
+
   var cells = rows.selectAll("td")
-      .data(data)
+      .data(data1)
       .enter()
       .append("td")
       .html(function(d){
         var value = [];
-        value = value.push(d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.G);
-        console.log(d.ItemNo);
-        console.log(d.A);
-        console.log(d.B);
+        //value = value.push(d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.G);
+        //console.log(d.ItemNo);
+        //console.log(d.A);
+        console.log(d);
         //console.log(value);
         return d;
       });
