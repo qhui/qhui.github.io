@@ -8,6 +8,19 @@ d3.json("exam2.json", function(json) {
   var thead = table.append("thead");
   var tbody = table.append("tbody");
 
+  var sort_by = function(field, reverse, primer){
+
+   var key = primer ?
+       function(x) {return primer(x[field])} :
+       function(x) {return x[field]};
+
+   reverse = !reverse ? 1 : -1;
+
+   return function (a, b) {
+       return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+     }
+   };
+
   thead.append("tr")
       .selectAll("th")
       .data(columns)
@@ -16,9 +29,7 @@ d3.json("exam2.json", function(json) {
       .text(function(column){return column; })
       .on("click", function(column){
         console.log(column);
-        data.sort(function(a,b){
-          return d3.descending(a.column, b.column);
-        });
+        data.sort(sort_by(column, true, parseInt));
       });
 
   var i = -1;
