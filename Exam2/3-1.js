@@ -25,7 +25,11 @@ d3.json("exam2.json", function(json) {
   }
 
   var cells = rows.selectAll("td")
-      .data(data1)
+      .data(function(row) {
+          return columns.map(function(column) {
+          return {column: column, value: row[column]};
+          });
+      })
       .enter()
       .append("td")
       .html(function(d){
@@ -35,6 +39,6 @@ d3.json("exam2.json", function(json) {
         //console.log(d.A);
         console.log(d);
         //console.log(value);
-        return d;
+        return d.value;
       });
 });
