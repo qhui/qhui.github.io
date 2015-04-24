@@ -25,6 +25,7 @@ d3.json("exam2.json", function(json) {
       .html(function(d){
         var value = [];
         value = value.push(d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.E);
+        console.log(value);
         return value;
       });
 });
