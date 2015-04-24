@@ -32,7 +32,7 @@ d3.json("exam2.json", function(json) {
       .on("click", function(column){
         console.log(column);
         data.sort(sort_by(column, true, parseInt));
-        d3.selectAll("td")
+        d3.selectAll("tr")
         .remove();
         updateData();
       });
