@@ -39,7 +39,7 @@ d3.json("exam2.json", function(json) {
          });
       })
       .on("click", function(){
-        d3.selectAll(tr)
+        d3.selectAll("tr")
           .style("background-color","white");
         d3.select(this)
           .style("background-color", "green");
