@@ -27,7 +27,7 @@ d3.json("exam2.json", function(json) {
         value = value.push(d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.E);
         console.log(d.ItemNo);
         console.log(d.A);
-        cosole.log(d.B);
+        console.log(d.B);
         console.log(value);
         return value;
       });
