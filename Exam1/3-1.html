@@ -3,7 +3,11 @@
 <style>
 
 .bar {
+<<<<<<< HEAD:Exam1/3-1.html
   fill: blue;
+=======
+  fill: steelblue;
+>>>>>>> origin/master:Exam1/try.html
 }
 
 .axis {
@@ -17,10 +21,6 @@
   shape-rendering: crispEdges;
 }
 
-.x.axis path {
-  display: none;
-}
-
 </style>
   <title>IE590 Exam1 </title>
 </head>
@@ -31,7 +31,11 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
+<<<<<<< HEAD:Exam1/3-1.html
 var margin = {top: 10, right: 10, bottom: 20, left: 30},
+=======
+var margin = {top: 10, right: 10, bottom: 20, left:20},
+>>>>>>> origin/master:Exam1/try.html
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -69,8 +73,13 @@ d3.tsv("data.tsv", type, function(error, data) {
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
+<<<<<<< HEAD:Exam1/3-1.html
       .attr("y", 3)
       .attr("dy", ".51em")
+=======
+      .attr("y", 6)
+      .attr("dy", ".31em")
+>>>>>>> origin/master:Exam1/try.html
       .style("text-anchor", "end")
       .text("Student number");
 
