@@ -32,8 +32,8 @@ d3.json("exam2.json", function(json) {
       .on("click", function(column){
         console.log(column);
         data.sort(sort_by(column, true, parseInt));
-        d3.selectAll("td")
-          .remove();
+        d3.select("tbody")
+          .exit().remove();
         updateData();
       });
 
