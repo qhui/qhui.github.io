@@ -24,11 +24,11 @@ d3.json("exam2.json", function(json) {
       .append("td")
       .html(function(d){
         var value = [];
-        value = value.push(d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.E);
+        value = value.push(d.ItemNo, d.A, d.B, d.C, d.D, d.E, d.F, d.G);
         console.log(d.ItemNo);
         console.log(d.A);
         console.log(d.B);
-        console.log(value);
-        return value;
+        //console.log(value);
+        return d;
       });
 });
