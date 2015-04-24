@@ -32,7 +32,7 @@ d3.json("exam2.json", function(json) {
       .on("click", function(column){
         console.log(column);
         data.sort(sort_by(column, true, parseInt));
-        d3.selectAll("tr")
+        d3.selectAll(".tb")
         .remove();
         updateData();
       });
@@ -48,6 +48,7 @@ d3.json("exam2.json", function(json) {
             i = i + 1;
             return i;
           })
+          .attr("class","tb")
           .on("mouseover", function(){
             d3.select(this)
               .style("background-color", "yellow");
