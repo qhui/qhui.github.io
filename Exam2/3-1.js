@@ -13,7 +13,12 @@ d3.json("exam2.json", function(json) {
       .data(columns)
       .enter()
       .append("th")
-      .text(function(column){return column; });
+      .text(function(column){return column; })
+      .on("click", function(column){
+        data.sort(function(a,b){
+          return d3.descending(a.column, b.column);
+        });
+      });
 
   var i = -1;
   var rows = tbody.selectAll("tr")
