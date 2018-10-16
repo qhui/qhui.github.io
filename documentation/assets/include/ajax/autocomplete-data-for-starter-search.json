@@ -1,0 +1,93 @@
+[
+  {
+    "label": "Index",
+    "url": "index.html"
+  },{
+    "label": "Clients",
+    "url": "clients.html"
+  },{
+    "label": "Collapse",
+    "url": "collapse.html"
+  },{
+    "label": "Call-to-action (CTA)",
+    "url": "cta.html"
+  },{
+    "label": "Datatables",
+    "url": "datatables.html"
+  },{
+    "label": "Features",
+    "url": "features.html"
+  },{
+    "label": "Footers",
+    "url": "footers.html"
+  },{
+    "label": "Form layouts",
+    "url": "form-layouts.html"
+  },{
+    "label": "Form wizard",
+    "url": "form-wizard.html"
+  },{
+    "label": "Gallery",
+    "url": "gallery.html"
+  },{
+    "label": "Header layouts",
+    "url": "header-layouts.html"
+  },{
+    "label": "Hero",
+    "url": "hero.html"
+  },{
+    "label": "Hero subscribe",
+    "url": "hero-subscribe.html"
+  },{
+    "label": "Icon blocks",
+    "url": "icon-blocks.html"
+  },{
+    "label": "Indicators",
+    "url": "indicators.html"
+  },{
+    "label": "Info",
+    "url": "info.html"
+  },{
+    "label": "Modal window",
+    "url": "modal-window.html"
+  },{
+    "label": "Media objects",
+    "url": "modal-objects.html"
+  },{
+    "label": "News blogs",
+    "url": "news-blogs.html"
+  },{
+    "label": "Pagination",
+    "url": "pagination.html"
+  },{
+    "label": "Pricing",
+    "url": "pricing.html"
+  },{
+    "label": "Products",
+    "url": "products.html"
+  },{
+    "label": "Products hero",
+    "url": "products-hero.html"
+  },{
+    "label": "Statistics",
+    "url": "stats.html"
+  },{
+    "label": "Testimonials",
+    "url": "testimonials.html"
+  },{
+    "label": "Tabs",
+    "url": "tabs.html"
+  },{
+    "label": "Team",
+    "url": "team.html"
+  },{
+    "label": "Unfold dropdown",
+    "url": "unfold-dropdown.html"
+  },{
+    "label": "Unfold sidebar",
+    "url": "unfold-sidebar.html"
+  },{
+    "label": "Video player",
+    "url": "video-player.html"
+  }
+]
